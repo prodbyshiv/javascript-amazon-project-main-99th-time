@@ -1,5 +1,5 @@
 // save the data 
-
+import { cart } from "../data/cart.js";
 
 let productsHTML = '';
 
