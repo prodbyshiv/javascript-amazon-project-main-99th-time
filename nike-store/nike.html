@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Nike Store</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="styles/shared/nike-header.css">
+  <link rel="stylesheet" href="styles/pages/nike.css">
+</head>
+
+<body>
+  <div class="nike-header">
+    <div class="nike-header-left-section">
+      <a href="nike.html" class="header-link">
+        <span class="nike-logo"
+          style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:900;font-size:28px;letter-spacing:2px;color:#111;text-decoration:none;">NIKE</span>
+        <span class="nike-mobile-logo"
+          style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:900;font-size:22px;letter-spacing:2px;color:#111;text-decoration:none;">NIKE</span>
+      </a>
+    </div>
+
+    <div class="nike-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+    </div>
+
+    <div class="nike-header-right-section">
+      <a class="nav-link header-link" href="orders.html">Orders</a>
+
+      <a class="bag-link header-link" href="checkout.html">
+        <img class="bag-icon" src="images/icons/bag-icon.svg">
+        <div class="bag-quantity js-bag-quantity">0</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="products-grid js-product-grid">
+
+      <div class="product-container" data-product-id="a1b2c3d4-e5f6-7890-abcd-ef1234567890">
+        <div class="product-image-container">
+          <img class="product-image" src="images/products/air-max-90.png">
+        </div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Nike Air Max 90
+        </div>
+
+        <div class="product-category">
+          Men's Shoes
+        </div>
+
+        <div class="product-color-count">
+          8 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 13,000.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+      <div class="product-container" data-product-id="b2c3d4e5-f6a7-8901-bcde-f12345678901">
+        <div class="product-image-container">
+          <img class="product-image" src="images/products/air-force-1-07.png">
+        </div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Nike Air Force 1 '07
+        </div>
+
+        <div class="product-category">
+          Men's Shoes
+        </div>
+
+        <div class="product-color-count">
+          12 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 11,500.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+      <div class="product-container" data-product-id="d4e5f6a7-b8c9-0123-defa-234567890123">
+        <div class="product-image-container">
+          <span class="product-tag">Best Seller</span>
+          <img class="product-image" src="images/products/dunk-low-retro.png">
+        </div>
+
+        <div class="product-subtitle">Best Seller</div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Nike Dunk Low Retro
+        </div>
+
+        <div class="product-category">
+          Men's Shoes
+        </div>
+
+        <div class="product-color-count">
+          15 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 11,000.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+      <div class="product-container" data-product-id="e5f6a7b8-c9d0-1234-efab-345678901234">
+        <div class="product-image-container">
+          <span class="product-tag">Just In</span>
+          <img class="product-image" src="images/products/air-jordan-1-mid.png">
+        </div>
+
+        <div class="product-subtitle">Just In</div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Air Jordan 1 Mid
+        </div>
+
+        <div class="product-category">
+          Men's Shoes
+        </div>
+
+        <div class="product-color-count">
+          10 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 12,500.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+      <div class="product-container" data-product-id="f6a7b8c9-d0e1-2345-fabc-456789012345">
+        <div class="product-image-container">
+          <img class="product-image" src="images/products/pegasus-40.png">
+        </div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Nike Pegasus 40
+        </div>
+
+        <div class="product-category">
+          Men's Road Running Shoes
+        </div>
+
+        <div class="product-color-count">
+          7 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 13,000.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+      <div class="product-container" data-product-id="a7b8c9d0-e1f2-3456-abcd-567890123456">
+        <div class="product-image-container">
+          <img class="product-image" src="images/products/blazer-mid-77.png">
+        </div>
+
+        <div class="product-name limit-text-to-2-lines">
+          Nike Blazer Mid '77 Vintage
+        </div>
+
+        <div class="product-category">
+          Men's Shoes
+        </div>
+
+        <div class="product-color-count">
+          6 Colours
+        </div>
+
+        <div class="product-price">
+          MRP : ₹ 10,500.00
+        </div>
+
+        <div class="product-quantity-container">
+          <select class="js-quantity-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="product-spacer"></div>
+
+        <div class="added-to-bag js-added-to-bag">
+          <img src="images/icons/checkmark.svg">
+          Added
+        </div>
+
+        <button class="add-to-bag-button button-primary js-add-to-bag">
+          Add to Bag
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="scripts/nike.js"></script>
+</body>
+
+</html>
