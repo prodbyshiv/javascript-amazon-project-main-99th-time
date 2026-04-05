@@ -1,6 +1,6 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
-import { cart, removeFromCart, getTotalQuantity, setCartItemQuantity } from "../data/cart.js";
+import { cart, removeFromCart, getTotalQuantity, updateQuantity } from "../data/cart.js";
 
 function updateHeaderQuantity() {
   document.querySelector('.js-retun-to-home-link').innerHTML = `${getTotalQuantity()} items`;
@@ -143,14 +143,25 @@ document.querySelectorAll('.js-save-quantity-link')
     const input = itemContainer.querySelector('.quantity-input');
     const newQuantity = Number(input.value);
 
-    if (!Number.isInteger(newQuantity) || newQuantity < 1) {
-      input.value = 1;
+    if (!Number.isInteger(newQuantity) || newQuantity < 1 || newQuantity >= 1000) {
+      input.value = itemContainer.querySelector('.quantity-label').textContent.trim();
       return;
     }
 
-    setCartItemQuantity(productId, newQuantity);
+    updateQuantity(productId, newQuantity);
     itemContainer.querySelector('.quantity-label').textContent = newQuantity;
     itemContainer.classList.remove('is-editing-quantity');
     updateHeaderQuantity();
   })
+})
+
+document.querySelectorAll('.quantity-input')
+.forEach((input)=>{
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      const itemContainer = input.closest('.cart-item-container');
+      const saveLink = itemContainer.querySelector('.js-save-quantity-link');
+      saveLink.click();
+    }
+  });
 })

@@ -44,7 +44,7 @@
      saveToStorage();
 }
 
-export function setCartItemQuantity(productId, quantity) {
+export function updateQuantity(productId, quantity) {
     cart.forEach((cartItem) => {
         if (cartItem.id === productId) {
             cartItem.quantity = quantity;
