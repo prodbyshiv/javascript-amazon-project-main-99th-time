@@ -1,13 +1,7 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
-import { removeFromCart } from "../data/cart.js";
-const cart = [{
-     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-     quantity: 1,
-},{
-    id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-     quantity: 1,
-}];
+import { cart, removeFromCart } from "../data/cart.js";
+
 let checkoutpageHTML = '';
 let matchingItem;
 cart.forEach((cartItem)=>{
@@ -20,7 +14,7 @@ cart.forEach((cartItem)=>{
 
     if (matchingItem) {
         checkoutpageHTML += `
-         <div class="cart-item-container">
+         <div class="cart-item-container js-cart-item-container-${matchingItem.id}">
             <div class="delivery-date">
               Delivery date: Tuesday, June 21
             </div>
@@ -108,7 +102,12 @@ document.querySelectorAll('.js-delete-link')
     const productId = link.dataset.productId;
     
     removeFromCart(productId);
+    console.log(cart);
     
+    const elementTodelete =  document.querySelector(`.js-cart-item-container-${productId}`);
+    elementTodelete.remove();
+    
+   
   })
 })
 
