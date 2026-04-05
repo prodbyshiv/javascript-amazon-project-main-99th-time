@@ -3,6 +3,7 @@
  if (!cart) {
      cart = [];
  }
+ 
 
  function saveToStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -41,4 +42,12 @@
 
      cart = newCart;
      saveToStorage();
+}
+
+export function getTotalQuantity() {
+    let total = 0;
+    cart.forEach((cartItem) => {
+        total += cartItem.quantity;
+    });
+    return total;
 }

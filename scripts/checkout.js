@@ -1,6 +1,8 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
-import { cart, removeFromCart } from "../data/cart.js";
+import { cart, removeFromCart,getTotalQuantity } from "../data/cart.js";
+
+const totalQuantity = getTotalQuantity();
 
 let checkoutpageHTML = '';
 let matchingItem;
@@ -32,7 +34,7 @@ cart.forEach((cartItem)=>{
                 </div>
                 <div class="product-quantity">
                   <span>
-                    Quantity: <span class="quantity-label">2</span>
+                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
                   </span>
                   <span class="update-quantity-link link-primary">
                     Update
@@ -96,6 +98,8 @@ cart.forEach((cartItem)=>{
 });
 document.querySelector('.js-order-summary').innerHTML = checkoutpageHTML;
 
+document.querySelector('.js-retun-to-home-link').innerHTML = `${totalQuantity} items`;
+
 document.querySelectorAll('.js-delete-link')
 .forEach((link)=>{
   link.addEventListener('click',()=>{
@@ -107,6 +111,8 @@ document.querySelectorAll('.js-delete-link')
     const elementTodelete =  document.querySelector(`.js-cart-item-container-${productId}`);
     elementTodelete.remove();
     
+    const newTotal = getTotalQuantity();
+    document.querySelector('.js-retun-to-home-link').innerHTML = `${newTotal} items`;
    
   })
 })
