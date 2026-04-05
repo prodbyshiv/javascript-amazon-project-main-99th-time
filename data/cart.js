@@ -44,6 +44,15 @@
      saveToStorage();
 }
 
+export function setCartItemQuantity(productId, quantity) {
+    cart.forEach((cartItem) => {
+        if (cartItem.id === productId) {
+            cartItem.quantity = quantity;
+        }
+    });
+    saveToStorage();
+}
+
 export function getTotalQuantity() {
     let total = 0;
     cart.forEach((cartItem) => {
